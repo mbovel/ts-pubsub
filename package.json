@@ -18,7 +18,7 @@
 	},
 	"name": "ts-pubsub",
 	"description": "Simple type-safe implementation of the publish–subscribe pattern in typescript",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"main": "build/PubSub.js",
 	"types": "build/PubSub.d.ts",
 	"directories": {
