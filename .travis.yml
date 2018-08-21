@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+    - node
+cache:
+    directories:
+        - node_modules
+notifications:
+    email: false
+script:
+    - npm run prettier-check
+    - npm run tslint
+before_deploy:
+    - npm run build
+deploy:
+    skip_cleanup: true
+    provider: npm
+    email: matthieu@bovel.net
+    api_key:
+        secure: BKq4VjoeZYJOnzRVdtRrEN7M+Xsy2ecLpNqDqupXJCGdfPboELH/DfVpGQnNcVeupNzIHdm8iXkXRf6Qtz/TU74JiDDKWhzHYdc5uAWHXPumpYNpOeei9Sjk/H9+gi1RHQ5Na3ysthfpfx12huoiFE2yjV688kAEoHBz1StZtotHw9+RxWQ6Cd/l+OR7mj3nvzFAZs45t7l9jreeHUTkRL0axZHHpaHdEF3soOvcdNsgjKrTEuo0vi7WuvUx7Gkv6dKA1KZgi0j4Y6zrP3kJdcpwjFSqW1oDKlalA9LRDYi74uuqEvi2LLwKliN3PtoRLKKQVGOr1OgIw7IjVZZuHo0RgJxBdoIUcpd50M5HVDHrA72xBXkDWXtsrrGkD9wncuMY6Sf+pF3HhKK6f7E6dFzwMEK5W9qKNZk77y42k8UlM6DEfwYYjo+DH/L8PeuB7yLDy3+pzsTUmlqoLThwdvQ+O3uEeUMPybqpSTvSbndqBZOTrk1UaNEt354ZdTyxGo3cFvBAUsIHciD0hNNwSoVz2c7033bwTnmWu4onpylqunUtTiryv4APp9z9E/VahEDhSQlPbg98kgxTwiOdGCdNNO89VDkQQCdel08t0UD7gFQL2lc4kiPVTbamEKmhRFvJajzerM3jt1xfwF7Ag9SAsq/1tynMcVPXs1RFKEQ=
+    on:
+        tags: true
+        repo: mbovel/ts-pubsub

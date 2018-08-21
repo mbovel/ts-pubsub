@@ -1,0 +1,38 @@
+{
+	"devDependencies": {
+		"@types/node": "^10.7.1",
+		"prettier": "^1.14.2",
+		"prettier-check": "^2.0.0",
+		"ts-node": "^7.0.1",
+		"tslint": "^5.11.0",
+		"typescript": "^3.0.1"
+	},
+	"scripts": {
+		"prettier-check": "prettier-check src/* *.json *.yml",
+		"prettier": "prettier --write src/* *.json *.yml",
+		"tslint": "tslint --project tsconfig.json",
+		"build": "tsc"
+	},
+	"name": "ts-pubsub",
+	"description": "Simple type-safe implementation of the publish–subscribe pattern in typescript",
+	"version": "0.1.0",
+	"main": "build/PubSub.ts",
+	"types": "build/PubSub.d.ts",
+	"directories": {
+		"test": "test"
+	},
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mbovel/ts-pubsub.git"
+	},
+	"keywords": [
+		"tree"
+	],
+	"author": "Matthieu Bovel <matthieu@bovel.net>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mbovel/ts-pubsub/issues"
+	},
+	"homepage": "https://github.com/mbovel/ts-pubsub#readme"
+}
