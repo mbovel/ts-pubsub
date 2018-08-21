@@ -11,7 +11,8 @@
 		"prettier-check": "prettier-check src/* *.json *.yml",
 		"prettier": "prettier --write src/* *.json *.yml",
 		"tslint": "tslint --project tsconfig.json",
-		"build": "tsc"
+		"build": "tsc",
+		"preversion": "npm run prettier && npm run tslint"
 	},
 	"name": "ts-pubsub",
 	"description": "Simple type-safe implementation of the publish–subscribe pattern in typescript",
